@@ -1,0 +1,18 @@
+.Box {
+  box-sizing: border-box;
+  box-sizing: content-box;
+  margin-top: 50px;
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}
+.sx {
+  border-radius: 50%;
+  margin: auto;
+  width: 375px;
+  margin-top: 50px;
+  background-color: rgb(179, 179, 234);
+}
