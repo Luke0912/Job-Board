@@ -13,7 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import SearchIcon from "@mui/icons-material/Search";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Search = styled("div")(({ theme }) => ({
@@ -58,10 +58,16 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export const Navbar = () => {
+export const Navbar = ({queryToApp}) => {
   const navigate = useNavigate();
   const pages = ["Jobs", "Applied-Jobs"];
   const [anchorElNav, setAnchorElNav] = useState(null);
+
+
+
+  const handleQuery = (e) => {
+    queryToApp(e.target.value);
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -72,7 +78,6 @@ export const Navbar = () => {
     navigate("/");
   };
   const viewApplied = () => {
-    console.log("hii");
     navigate("/Applied");
   };
 
@@ -174,6 +179,7 @@ export const Navbar = () => {
               </SearchIconWrapper>
               <StyledInputBase
                 placeholder="Search…"
+                onChange={handleQuery}
                 inputProps={{ "aria-label": "search" }}
               />
             </Search>

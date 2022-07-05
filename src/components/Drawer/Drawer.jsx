@@ -8,7 +8,7 @@ import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 
-export const TDrawer = ({ data }) => {
+export const TDrawer = ({ data, newValues }) => {
   const [state, setState] = useState({
     top: false,
     left: false,
@@ -59,12 +59,38 @@ export const TDrawer = ({ data }) => {
             </Typography>
             <br />
             <br />
-            <Button variant="contained">Apply</Button>
+            <Button variant="contained" onClick={handleEditing}>
+              Apply
+            </Button>
           </CardContent>
         </Card>
       </List>
     </Box>
   );
+
+  const [editableValues, setEditableValues] = useState({
+    title: data.title,
+    logo: data.logo,
+    company: data.company,
+    desc: data.desc,
+    type: data.type,
+    isApplied: data.isApplied,
+  });
+  const handleEditing = (event) => {
+    const value = { ...editableValues };
+    const nValues = { ...value, [event.target.name]: event.target.value };
+    setEditableValues(nValues);
+    const payLoad = {
+      title: data.title,
+      logo: data.logo,
+      company: data.company,
+      desc: data.desc,
+      type: data.type,
+      isApplied: (data.isApplied = true),
+    };
+    setEditableValues(payLoad);
+    newValues(payLoad);
+  };
 
   return (
     <div>

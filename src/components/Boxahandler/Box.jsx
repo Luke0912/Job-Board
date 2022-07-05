@@ -1,18 +1,23 @@
-import "./Box.css"
+import "./Box.css";
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { Jobs } from "../../configs/data";
 import { TDrawer } from "../Drawer/Drawer";
 import Typography from "@mui/material/Typography";
 
-export const Box = () => {
+// import { Jobs } from "../../configs/data";
+
+export const Box = ({ toApp, data }) => {
+  const newValues = (payload) => {
+    toApp(payload);
+  };
+
   return (
     <>
       <div className="Box">
-        {Jobs.map((e) => (
+        {data.map((e) => (
           <Card className="sx">
             <CardMedia
               component="img"
@@ -29,7 +34,7 @@ export const Box = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <TDrawer data={e}></TDrawer>
+              <TDrawer data={e} newValues={newValues}></TDrawer>
             </CardActions>
           </Card>
         ))}
