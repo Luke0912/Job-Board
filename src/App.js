@@ -3,7 +3,7 @@ import "./App.css";
 import { Route, Routes } from "react-router";
 
 import { Applied } from "./pages/Applied";
-import { Box } from "./components/Boxahandler/Box";
+import { Box } from "./components/BoxHandler/Box";
 import { Jobs } from "./configs/data";
 import { Navbar } from "./components/NavbarHandler/Navbar";
 import { useState } from "react";
