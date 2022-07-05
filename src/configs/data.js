@@ -1,6 +1,6 @@
 export const Jobs = [
   {
-    id: "1",
+    id: 1,
     title: "SDE-1",
     logo: "https://img.naukimg.com/logo_images/groups/v1/1205138.gif",
     company: "Ola",
@@ -9,7 +9,7 @@ export const Jobs = [
     isApplied: false,
   },
   {
-    id: "2",
+    id: 2,
     title: "Executive",
     logo: "https://img.naukimg.com/logo_images/groups/v1/1285014.gif",
     company: "Swiggy",
@@ -18,7 +18,7 @@ export const Jobs = [
     isApplied: false,
   },
   {
-    id: "3",
+    id: 3,
     title: "Backend-Engineer",
     logo: "https://img.naukimg.com/logo_images/groups/v1/4575629.gif",
     company: "Acko",
@@ -27,7 +27,7 @@ export const Jobs = [
     isApplied: false,
   },
   {
-    id: "4",
+    id: 4,
     title: "Manager",
     logo: "https://img.naukimg.com/logo_images/groups/v1/555816.gif",
     company: "Uniphore",
@@ -36,7 +36,7 @@ export const Jobs = [
     isApplied: false,
   },
   {
-    id: "5",
+    id: 5,
     title: "Frontend developer",
     logo: "https://img.naukimg.com/logo_images/groups/v1/4622851.gif",
     company: "Razorpay",
@@ -45,7 +45,7 @@ export const Jobs = [
     isApplied: false,
   },
   {
-    id: "6",
+    id: 6,
     title: "Java-Developer",
     logo: "https://img.naukimg.com/logo_images/groups/v1/1715696.gif",
     company: "Lenskart",
@@ -54,7 +54,7 @@ export const Jobs = [
     isApplied: false,
   },
   {
-    id: "7",
+    id: 7,
     title: "System-Designer",
     logo: "https://img.naukimg.com/logo_images/groups/v1/2519816.gif",
     company: "Cars24",
@@ -63,7 +63,7 @@ export const Jobs = [
     isApplied: false,
   },
   {
-    id: "8",
+    id: 8,
     title: "Sales Exec",
     logo: "https://img.naukimg.com/logo_images/groups/v1/3989906.gif",
     company: "Byjus",
@@ -72,7 +72,7 @@ export const Jobs = [
     isApplied: false,
   },
   {
-    id: "9",
+    id: 9,
     title: "Support Officer",
     logo: "https://img.naukimg.com/logo_images/groups/v1/775108.gif",
     company: "LivSpace",
@@ -81,7 +81,7 @@ export const Jobs = [
     isApplied: false,
   },
   {
-    id: "10",
+    id: 10,
     title: "System-Arch",
     logo: "https://img.naukimg.com/logo_images/groups/v1/1194340.gif",
     company: "NoBroker",

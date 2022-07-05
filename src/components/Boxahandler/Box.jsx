@@ -7,8 +7,6 @@ import CardMedia from "@mui/material/CardMedia";
 import { TDrawer } from "../Drawer/Drawer";
 import Typography from "@mui/material/Typography";
 
-// import { Jobs } from "../../configs/data";
-
 export const Box = ({ toApp, data }) => {
   const newValues = (payload) => {
     toApp(payload);
@@ -18,7 +16,7 @@ export const Box = ({ toApp, data }) => {
     <>
       <div className="Box">
         {data.map((e) => (
-          <Card className="sx">
+          <Card className="sx" key={e.id}>
             <CardMedia
               component="img"
               height="140"

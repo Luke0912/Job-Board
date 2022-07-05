@@ -1,14 +1,32 @@
+// import { useEffect, useState } from "react";
+
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 export const Applied = ({ newValue }) => {
+  // const [newVal, setNewVal] = useState([]);
+
+  // const value = { ...appliedJobs };
+
+  // const nValue = { ...value, value };
+
+  // useEffect(() => {
+  //   setNewVal(nValue);
+  // },[]);
+  // console.log(nValue);
+
+  // useEffect(() => {
+  //   setNewVal(appliedJobs);
+  // }, [appliedJobs]);
+
   return (
     <>
       {newValue.length !== 0 && (
         <>
-          <Card className="sx">
+          {/* {newVal.map((newValue) => ( */}
+          <Card className="sx" key={newValue.id}>
             <CardMedia
               component="img"
               height="140"
@@ -33,6 +51,7 @@ export const Applied = ({ newValue }) => {
               </Typography>
             </CardContent>
           </Card>
+          {/* ))} */}
         </>
       )}
       {newValue.length === 0 && (

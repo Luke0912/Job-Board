@@ -31,8 +31,8 @@ export const TDrawer = ({ data, newValues }) => {
     <Box
       sx={{ width: 450 }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      // onClick={toggleDrawer(anchor, false)}
+      // onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
         <Card className="sx">
@@ -60,13 +60,15 @@ export const TDrawer = ({ data, newValues }) => {
             <br />
             <br />
             <Button variant="contained" onClick={handleEditing}>
-              Apply
+              {buttonText}
             </Button>
           </CardContent>
         </Card>
       </List>
     </Box>
   );
+  const [buttonText, setButtonText] = useState('Apply');
+
 
   const [editableValues, setEditableValues] = useState({
     title: data.title,
@@ -76,6 +78,7 @@ export const TDrawer = ({ data, newValues }) => {
     type: data.type,
     isApplied: data.isApplied,
   });
+
   const handleEditing = (event) => {
     const value = { ...editableValues };
     const nValues = { ...value, [event.target.name]: event.target.value };
@@ -90,12 +93,13 @@ export const TDrawer = ({ data, newValues }) => {
     };
     setEditableValues(payLoad);
     newValues(payLoad);
+    setButtonText('Applied');
   };
 
   return (
     <div>
-      {["right"].map((anchor) => (
-        <>
+      {["right"].map((anchor, index) => (
+        <div key={index}>
           <Button onClick={toggleDrawer(anchor, true)}>View / Apply</Button>
           <Drawer
             anchor={anchor}
@@ -104,7 +108,7 @@ export const TDrawer = ({ data, newValues }) => {
           >
             {list(anchor)}
           </Drawer>
-        </>
+        </div>
       ))}
     </div>
   );
