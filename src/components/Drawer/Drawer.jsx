@@ -71,6 +71,7 @@ export const TDrawer = ({ data, newValues }) => {
 
 
   const [editableValues, setEditableValues] = useState({
+    id:data.id,
     title: data.title,
     logo: data.logo,
     company: data.company,
@@ -84,6 +85,7 @@ export const TDrawer = ({ data, newValues }) => {
     const nValues = { ...value, [event.target.name]: event.target.value };
     setEditableValues(nValues);
     const payLoad = {
+      id:data.id,
       title: data.title,
       logo: data.logo,
       company: data.company,

@@ -10,10 +10,16 @@ import { useState } from "react";
 
 function App() {
   const [newValue, setNewValue] = useState([]);
+
   const [query, setNewQuery] = useState("");
   const toApp = (payload) => {
-    setNewValue(payload);
+    console.log(payload);
+    let curr = [...newValue, payload];
+    setNewValue(curr);
+    console.log(newValue);
+    // curr = curr.push(payload);
   };
+
   const queryToApp = (payload) => {
     setNewQuery(payload);
   };

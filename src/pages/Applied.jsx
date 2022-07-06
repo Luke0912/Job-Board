@@ -25,33 +25,33 @@ export const Applied = ({ newValue }) => {
     <>
       {newValue.length !== 0 && (
         <>
-          {/* {newVal.map((newValue) => ( */}
-          <Card className="sx" key={newValue.id}>
-            <CardMedia
-              component="img"
-              height="140"
-              image={newValue.logo}
-              alt="company logo"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Company:{newValue.company}
-              </Typography>
-              <Typography gutterBottom variant="h5" component="div">
-                Title:{newValue.title}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Description:{newValue.desc}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Type:{newValue.type}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Status:Applied
-              </Typography>
-            </CardContent>
-          </Card>
-          {/* ))} */}
+          {newValue.map((newValue) => (
+            <Card className="sx" key={newValue.id}>
+              <CardMedia
+                component="img"
+                height="140"
+                image={newValue.logo}
+                alt="company logo"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Company:{newValue.company}
+                </Typography>
+                <Typography gutterBottom variant="h5" component="div">
+                  Title:{newValue.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Description:{newValue.desc}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Type:{newValue.type}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Status:Applied
+                </Typography>
+              </CardContent>
+            </Card>
+          ))}
         </>
       )}
       {newValue.length === 0 && (

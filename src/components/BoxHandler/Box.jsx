@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 
 export const Box = ({ toApp, data }) => {
   const newValues = (payload) => {
+    console.log(payload);
     toApp(payload);
   };
 
