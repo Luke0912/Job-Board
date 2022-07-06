@@ -13,11 +13,8 @@ function App() {
 
   const [query, setNewQuery] = useState("");
   const toApp = (payload) => {
-    console.log(payload);
     let curr = [...newValue, payload];
     setNewValue(curr);
-    console.log(newValue);
-    // curr = curr.push(payload);
   };
 
   const queryToApp = (payload) => {
